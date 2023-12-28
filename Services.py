@@ -15,8 +15,6 @@ def load_lottieurl(url):
     return r.json()
 
 lottie_coding = load_lottieurl("https://lottie.host/75f245ec-0ded-4059-991f-1cfa81b84629/IyyjfwuXFo.json")
-#img_contact_form = Image.open("images/yt_contact_form.png")
-#img_lottie_animation = Image.open("images/yt_lottie_animation.png")
 
 # Use local CSS
 
@@ -40,7 +38,7 @@ st.markdown("""
         """)
 st.write("---")
 
-st.header('Web App Development Services ')
+st.header('HR Web App Development Services ')
 st.markdown(""" 
         Focusing in Streamlit and Python I can help you turn your HR data into jaw-dropping, eye-popping web apps?
         🌐✨ Whether it's data visualizations, AI-powered apps, or sleek, user-friendly interfaces you're after, I got the answer for your questions. 
