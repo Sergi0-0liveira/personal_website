@@ -72,7 +72,7 @@ st.write("""
 
 st.write("---")
 
-if st.button(button_key):
+if st.button("Open CV", key=button_key):
     open_cv()
 
 
