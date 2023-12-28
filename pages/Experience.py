@@ -20,6 +20,12 @@ def download_cv():
     cv_path = "pages/Sérgio__Oliveira_-DevelopmentLead.pdf"
     with open(cv_path, "rb") as file:
         cv_bytes = file.read()
+    st.download_button(
+        label="Download CV",
+        data=cv_bytes,
+        file_name="Sérgio__Oliveira_-DevelopmentLead.pdf",  # Change the file name if needed
+        mime="application/pdf"
+    )
 
 
 # Define the app title
