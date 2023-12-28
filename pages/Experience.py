@@ -19,14 +19,15 @@ def open_cv():
     # Replace this path with the actual path to your CV file
     cv_path = "cv.pdf"
 
+    # Generate a unique key for the button inside the function
     button_key = "open_cv_button"
-        
+
     if st.button(button_key):
         try:
             with open(cv_path, "rb") as file:
                 cv_bytes = file.read()
             encoded_pdf = base64.b64encode(cv_bytes).decode("utf-8")
-                
+
             # Open the CV in a new tab using JavaScript
             st.markdown(f"<a href=\"javascript:window.open('data:application/pdf;base64,{encoded_pdf}','_blank');\">CV</a>", unsafe_allow_html=True)
         except FileNotFoundError:
