@@ -25,7 +25,7 @@ with st.container():
         st.write(" **Role:** Group Organizational Development Lead""")
 
     with right_column:
-        image = Image.open('bolttech.png')
+        image = Image.open('pages/bolttech.png')
         st.image(image)
 
 st.write("---")
