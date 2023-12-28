@@ -23,9 +23,11 @@ def open_cv():
             with open(cv_path, "rb") as file:
                 cv_bytes = file.read()
             encoded_pdf = base64.b64encode(cv_bytes).decode("utf-8")
-            st.markdown(f"<a href=\"data:application/pdf;base64,{encoded_pdf}\" target=\"_blank\">CV</a>", unsafe_allow_html=True)
+                
+            # Open the CV in a new tab using JavaScript
+            st.markdown(f"<a href=\"javascript:window.open('data:application/pdf;base64,{encoded_pdf}','_blank');\">CV</a>", unsafe_allow_html=True)
         except FileNotFoundError:
-            st.error("CV not found or not up to date. Please send an email requesting an uploaded version.")
+            st.error("CV file not found or not up to date. Please send an email requesting an uploaded version.")
 
 
 # Define the app title
@@ -58,17 +60,13 @@ st.write("---")
 st.write(""" 
             With over 10 years of experience in global companies, I've garnered extensive expertise in diverse People Partner roles, supporting the establishment of HR functions and implementing strategies that harmonize across cultures and geographies. 
             Key aspects of my experience include:
-            
             * Global People Partner Expertise:  Contributing to the establishment and enhancement of HR functions on an international scale.
             * Cross-Cultural HR Strategy: Proficient in developing and aligning HR strategies within multinational environments, while ensuring alignment with global business objectives.
             * Setup & Optimization of HR Functions: Led the inception and optimization of HR frameworks from scratch within global organizations, fostering inclusive work cultures while adapting practices to resonate effectively across various regions. 
-            * Data-Driven HR Insights: Leveraged data  to measure the impact of HR initiatives across global teams, providing insights that contribute significantly to the achievement of organizational goals on an global scale. 
+            * Data-Driven HR Insights: Leveraged data  to measure the impact of HR initiatives across global teams, providing insights that contribute significantly to the achievement of organizational goals on a global scale. 
             """)
 
 st.write("---")
-
-if st.button("Open CV"):
-        open_cv()
 
 
 
