@@ -65,7 +65,7 @@ st.button(
         data=cv_bytes,
         file_name="Sérgio__Oliveira_-DevelopmentLead.pdf.pdf",  # Change the file name if needed
         mime="application/pdf"
-    ):
+    )
         download_cv()
 
 
