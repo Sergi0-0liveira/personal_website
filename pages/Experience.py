@@ -62,7 +62,7 @@ st.write("""
 
 st.write("---")
 
-st.button("Open CV"):
+if st.button("Open CV"):
         open_cv()
 
 
