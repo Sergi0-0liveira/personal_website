@@ -15,23 +15,22 @@ def local_css(file_name):
 local_css("style.css")
 
 #function to open CV
-def open_cv():
+def download_cv():
     # Replace this path with the actual path to your CV file
     cv_path = "cv.pdf"
 
-    # Generate a unique key for the button inside the function
-    button_key = "open_cv_button"
+    # Read the CV file as bytes
+    with open(cv_path, "rb") as file:
+        cv_bytes = file.read()
 
-    if st.button(button_key):
-        try:
-            with open(cv_path, "rb") as file:
-                cv_bytes = file.read()
-            encoded_pdf = base64.b64encode(cv_bytes).decode("utf-8")
+    # Convert the bytes to base64 format
+    encoded_cv = base64.b64encode(cv_bytes).decode("utf-8")
 
-            # Open the CV in a new tab using JavaScript
-            st.markdown(f"<a href=\"javascript:window.open('data:application/pdf;base64,{encoded_pdf}','_blank');\">CV</a>", unsafe_allow_html=True)
-        except FileNotFoundError:
-            st.error("CV file not found or not up to date. Please send an email requesting an uploaded version.")
+    # Create a download link
+    download_link = f"href=\"data:application/pdf;base64,{encoded_cv}\" download=\"CV.pdf\""
+
+    st.markdown(f"**Download your CV**", unsafe_allow_html=True)
+    st.markdown(f"<a {download_link}>Click here to download your CV</a>", unsafe_allow_html=True)
 
 
 # Define the app title
@@ -72,8 +71,8 @@ st.write("""
 
 st.write("---")
 
-if st.button("Open CV", key=button_key):
-    open_cv()
+if st.button("Download CV"):
+    download_cv()
 
 
 ### contact form ###
