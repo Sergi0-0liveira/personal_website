@@ -25,7 +25,7 @@ with st.container():
         st.write(" **Role:** Group Organizational Development Lead""")
 
     with right_column:
-        image = Image.open('C:/Users/SergioOliveira/PycharmProjects/PeopleAIhub/bolttech.png')
+        image = Image.open('bolttech.png')
         st.image(image)
 
 st.write("---")
@@ -54,7 +54,7 @@ st.write("""
 st.write("---")
 
 if st.button("Download CV"):
-        os.startfile(r"C:\Users\SergioOliveira\PycharmProjects\Personal_Website\pages\Sérgio__Oliveira_-DevelopmentLead.pdf")
+        os.startfile(r"Sérgio__Oliveira_-DevelopmentLead.pdf")
 
 
 
