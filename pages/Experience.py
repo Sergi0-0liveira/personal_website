@@ -14,23 +14,16 @@ def local_css(file_name):
 
 local_css("style.css")
 
-#function to open CV
 def download_cv():
     # Replace this path with the actual path to your CV file
     cv_path = "cv.pdf"
 
-    # Read the CV file as bytes
-    with open(cv_path, "rb") as file:
-        cv_bytes = file.read()
-
-    # Convert the bytes to base64 format
-    encoded_cv = base64.b64encode(cv_bytes).decode("utf-8")
-
-    # Create a download link
-    download_link = f"href=\"data:application/pdf;base64,{encoded_cv}\" download=\"CV.pdf\""
-
-    st.markdown(f"**Download your CV**", unsafe_allow_html=True)
-    st.markdown(f"<a {download_link}>Click here to download your CV</a>", unsafe_allow_html=True)
+    # Download the CV file directly when the button is clicked
+    st.download_button(
+        label="Download CV",
+        filename="CV.pdf",
+        data=open(cv_path, "rb").read()
+    )
 
 
 # Define the app title
@@ -71,9 +64,9 @@ st.write("""
 
 st.write("---")
 
+# Call the function to download the CV when the button is clicked
 if st.button("Download CV"):
     download_cv()
-
 
 ### contact form ###
 st.write("---")
