@@ -15,17 +15,12 @@ def local_css(file_name):
 local_css("style.css")
 
 #function to open CV
-def download_cv():
+def open_cv():
     # Replace this path with the actual path to your CV file
     cv_path = "pages/Sérgio__Oliveira_-DevelopmentLead.pdf"
-    with open(cv_path, "rb") as file:
-        cv_bytes = file.read()
-    st.download_button(
-        label="Download CV",
-        data=cv_bytes,
-        file_name="Sérgio__Oliveira_-DevelopmentLead.pdf",  # Change the file name if needed
-        mime="application/pdf"
-    )
+    if st.button("Open CV"):
+        new_tab_url = f'<a href="{pages/Sérgio__Oliveira_-DevelopmentLead.pdf}" target="_blank">CV</a>'
+        st.markdown(new_tab_url, unsafe_allow_html=True)
 
 
 # Define the app title
@@ -67,8 +62,8 @@ st.write("""
 
 st.write("---")
 
-if st.button("Download CV"):
-        download_cv()
+st.button("Open CV"):
+        open_cv()
 
 
 
