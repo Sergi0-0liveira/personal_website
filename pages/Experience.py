@@ -18,8 +18,10 @@ local_css("style.css")
 def open_cv():
     # Replace this path with the actual path to your CV file
     cv_path = "Sérgio__Oliveira_-DevelopmentLead.pdf"
-    new_tab_url = f'<a href="cv.pdf" target="_blank">Sérgio Oliveira</a>'
-    st.markdown(new_tab_url, unsafe_allow_html=True)
+    if st.button("Open CV"):
+        with open(cv_path, "rb") as file:
+            cv_bytes = file.read()
+        st.markdown(f'<a href="data:application/pdf;base64,{cv_bytes}" target="_blank">CV</a>', unsafe_allow_html=True)
 
 
 # Define the app title
