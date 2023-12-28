@@ -14,6 +14,18 @@ def local_css(file_name):
 
 local_css("style.css")
 
+#function to open CV
+def download_cv():
+    # Replace this path with the actual path to your CV file
+    cv_path = "pages/Sérgio__Oliveira_-DevelopmentLead.pdf"
+    with open(cv_path, "rb") as file:
+        cv_bytes = file.read()
+    st.download_button(
+        label="Download CV",
+        data=cv_bytes,
+        file_name="Sérgio__Oliveira_-DevelopmentLead.pdf.pdf",  # Change the file name if needed
+        mime="application/pdf"
+
 # Define the app title
 st.title('Experience')
 st.write("---")
@@ -42,7 +54,7 @@ st.write("---")
 st.markdown(" ### Previous Experience and roles ### ")
 st.write("---")
 st.write(""" 
-            With over 10 years of experience in global companies I've garnered extensive expertise in diverse People Partner roles, supporting the establishment of HR functions and implementing strategies that harmonize across cultures and geographies. 
+            With over 10 years of experience in global companies, I've garnered extensive expertise in diverse People Partner roles, supporting the establishment of HR functions and implementing strategies that harmonize across cultures and geographies. 
             Key aspects of my experience include:
             
             * Global People Partner Expertise:  Contributing to the establishment and enhancement of HR functions on an international scale.
@@ -54,7 +66,7 @@ st.write("""
 st.write("---")
 
 if st.button("Download CV"):
-        os.startfile(r"Sérgio__Oliveira_-DevelopmentLead.pdf")
+        download_cv()
 
 
 
