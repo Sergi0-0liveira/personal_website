@@ -17,7 +17,7 @@ local_css("style.css")
 #function to open CV
 def open_cv():
     # Replace this path with the actual path to your CV file
-    cv_path = "Sérgio__Oliveira_-DevelopmentLead.pdf"
+    cv_path = "cv.pdf"
     if st.button("Open CV"):
         with open(cv_path, "rb") as file:
             cv_bytes = file.read()
