@@ -17,8 +17,8 @@ local_css("style.css")
 #function to open CV
 def open_cv():
     # Replace this path with the actual path to your CV file
-    cv_path = "pages/Sérgio__Oliveira_-DevelopmentLead.pdf"
-    new_tab_url = f'<a href="{pages/Sérgio__Oliveira_-DevelopmentLead.pdf}" target="_blank">CV</a>'
+    cv_path = "Sérgio__Oliveira_-DevelopmentLead.pdf"
+    new_tab_url = f'<a href="{Sérgio__Oliveira_-DevelopmentLead.pdf}" target="_blank">CV</a>'
     st.markdown(new_tab_url, unsafe_allow_html=True)
 
 
