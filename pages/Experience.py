@@ -21,6 +21,7 @@ def download_cv():
     with open(cv_path, "rb") as file:
         cv_bytes = file.read()
 
+
 # Define the app title
 st.title('Experience')
 st.write("---")
@@ -60,12 +61,7 @@ st.write("""
 
 st.write("---")
 
-if st.button(
-        label="Download CV",
-        data=cv_bytes,
-        file_name="Sérgio__Oliveira_-DevelopmentLead.pdf.pdf",  # Change the file name if needed
-        mime="application/pdf"
-    ):
+if st.button("Download CV"):
         download_cv()
 
 
