@@ -18,7 +18,10 @@ local_css("style.css")
 def open_cv():
     # Replace this path with the actual path to your CV file
     cv_path = "cv.pdf"
-    if st.button("Open CV"):
+
+    button_key = "open_cv_button"
+        
+    if st.button(button_key):
         try:
             with open(cv_path, "rb") as file:
                 cv_bytes = file.read()
@@ -68,7 +71,7 @@ st.write("""
 
 st.write("---")
 
-if st.button("Open CV"):
+if st.button(button_key):
     open_cv()
 
 
