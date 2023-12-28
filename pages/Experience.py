@@ -19,9 +19,13 @@ def open_cv():
     # Replace this path with the actual path to your CV file
     cv_path = "cv.pdf"
     if st.button("Open CV"):
-        with open(cv_path, "rb") as file:
-            cv_bytes = file.read()
-        st.markdown(f'<a href="data:application/pdf;base64,{cv_bytes}" target="_blank">CV</a>', unsafe_allow_html=True)
+        try:
+            with open(cv_path, "rb") as file:
+                cv_bytes = file.read()
+            encoded_pdf = base64.b64encode(cv_bytes).decode("utf-8")
+            st.markdown(f"<a href=\"data:application/pdf;base64,{encoded_pdf}\" target=\"_blank\">CV</a>", unsafe_allow_html=True)
+        except FileNotFoundError:
+            st.error("CV not found or not up to date. Please send an email requesting an uploaded version.")
 
 
 # Define the app title
