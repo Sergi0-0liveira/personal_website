@@ -15,8 +15,6 @@ def load_lottieurl(url):
     return r.json()
 
 lottie_coding = load_lottieurl("https://lottie.host/75f245ec-0ded-4059-991f-1cfa81b84629/IyyjfwuXFo.json")
-#img_contact_form = Image.open("images/yt_contact_form.png")
-#img_lottie_animation = Image.open("images/yt_lottie_animation.png")
 
 # Use local CSS
 def local_css(file_name):
