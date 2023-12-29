@@ -57,8 +57,10 @@ with st.container():
 
 st.write("---")
 st.markdown(""" 
-                Do you need help? Maybe building a web app link this? 
-                I'm always up for a challenge! Whether it's tech or HR related, 
+                Do you need help :question: :question: 
+                Maybe building a web app link this? """)	
+st.markdown(""" Reach out!
+               :muscle: I'm always up for a challenge! Whether it's tech or HR related. 
                  """)
 
 ### contact form ###
