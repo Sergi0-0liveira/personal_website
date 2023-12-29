@@ -21,6 +21,7 @@ def download_cv():
 
 # Define the app title
 st.title('Experience')
+
 st.write("---")
 with st.container():
     left_column, right_column = st.columns(2)
@@ -58,8 +59,7 @@ st.write("""
 st.write("---")
 
 # Call the function to download the CV when the button is clicked
-st.button("Download CV"):
-    download_cv()
+download_cv()
 
 ### contact form ###
 st.write("---")
