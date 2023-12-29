@@ -56,9 +56,9 @@ with st.container():
             import webbrowser
             webbrowser.open_new_tab(repo_url)
 
-# Display the button in your app
-st.markdown(f"**Open GitHub Page:**")
-st.button(btn_open_github)
+        # Display the button in your app
+        st.markdown(f"**Open GitHub Page:**")
+        st.button(btn_open_github)
     with center_column:
         st.markdown("[LinkedIn Page...](https://www.linkedin.com/in/sergio-oliveira-headofpeople/)")
 
