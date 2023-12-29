@@ -52,7 +52,7 @@ with st.container():
     left_column, center_column, right_column = st.columns(3)
     with left_column:
         if st.button(" GitHub Page  "):
-            open_git_page()
+            st.markdown(f'<a href="https://github.com/Sergi0-0liveira" target="_blank">Link to GitHub</a>', unsafe_allow_html=True)
     with center_column:
         if st.button(" LinkedIn Page "):
             open_linkedin()
