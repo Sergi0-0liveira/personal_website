@@ -23,10 +23,7 @@ def download_cv():
 
     if not cv_downloaded:
         # If not clicked, download the CV file
-        st.download_button(
-            label="Download CV",
-            data=open(cv_path, "rb").read()
-        )
+        st.download_button( label="Download CV", data=open(cv_path, "rb").read())
         cv_downloaded = True
 
 
