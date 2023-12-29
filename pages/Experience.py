@@ -16,12 +16,12 @@ local_css("style.css")
 
 def download_cv():
     # Replace this path with the actual path to your CV file
-    cv_path = "cv.pdf"
+    cv_path = "pages/cv.pdf"
 
     # Download the CV file directly when the button is clicked
     st.download_button(
         label="Download CV",
-        filename="CV.pdf",
+        filename="cv.pdf",
         data=open(cv_path, "rb").read()
     )
 
