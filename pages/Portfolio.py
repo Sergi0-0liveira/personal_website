@@ -1,8 +1,6 @@
 import requests
 import streamlit as st
 from streamlit_lottie import st_lottie
-from streamlit import button, markdown
-import webbrowser
 
 st.set_page_config(
         page_title="Portfolio",page_icon=":tada:"
@@ -40,30 +38,12 @@ st.markdown("<h3> In the meantime visit my: </h3>", unsafe_allow_html=True)
 
 
 with st.container():
-
-    left_column, center_column, right_column = st.columns(3)
+    left_column, center_column = st.columns(2)
     with left_column:
+        st.markdown(":point_right:[GitHub Page...](https://github.com/Sergi0-0liveira)")
 
-        # Get your GitHub repository URL from Streamlit Share Cloud
-        repo_url = "https://github.com/Sergi0-0liveira"
-
-        # Create a button to open your GitHub page
-        btn_open_github = button('Open GitHub Page')
-        
-        # When the button is clicked, open the GitHub page in a new browser tab
-        @st.experimental_button_callback
-        def open_github_page():
-            import webbrowser
-            webbrowser.open_new_tab(repo_url)
-
-        # Display the button in your app
-        st.markdown(f"**Open GitHub Page:**")
-        st.button(btn_open_github)
     with center_column:
-        st.markdown("[LinkedIn Page...](https://www.linkedin.com/in/sergio-oliveira-headofpeople/)")
-
-    with right_column:
-        download_cv()
+        st.markdown(":point_right: [LinkedIn Page...](https://www.linkedin.com/in/sergio-oliveira-headofpeople/)")
 
 
 ### contact form ###
