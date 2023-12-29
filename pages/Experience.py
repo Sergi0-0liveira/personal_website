@@ -23,7 +23,7 @@ def download_cv():
     if cv_downloaded == True:
             st.write("Donwloadede")
     else:
-            data=open(cv_path, "rb").read()),
+            data=open(cv_path, "rb").read())),
             cv_downloaded = True
 
 # Define the app title
