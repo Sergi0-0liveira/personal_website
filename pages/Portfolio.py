@@ -1,6 +1,7 @@
 import requests
 import streamlit as st
 from streamlit_lottie import st_lottie
+import streamlit import button, markdown
 import webbrowser
 
 st.set_page_config(
@@ -42,8 +43,7 @@ def open_github_page():
     webbrowser.open_new_tab(repo_url)
 
 
-
-#function to open gitpage
+#function to open LinkedIn page
 git_linkedin = "https://www.linkedin.com/in/sergio-oliveira-headofpeople/"
 
 def open_linkedin():
