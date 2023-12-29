@@ -21,10 +21,10 @@ def local_css(file_name):
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 
-local_css("style/style.css")
+local_css("style.css")
 
 #download cv function
-cv_path = 'C:/Users/SergioOliveira/PycharmProjects/Personal_Website/pages/cv.pdf'
+cv_path = 'pages/cv.pdf'
 
 def download_cv():
     with open(cv_path, "rb") as file:
