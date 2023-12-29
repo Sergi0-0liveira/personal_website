@@ -53,7 +53,7 @@ with st.container():
 
     left_column, center_column, right_column = st.columns(3)
     with left_column:
-        st.button(" GitHub Page  "):
+        st.button(" GitHub Page "):
             
     with center_column:
         if st.button(" LinkedIn Page "):
