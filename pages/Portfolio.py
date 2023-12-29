@@ -32,8 +32,10 @@ def download_cv():
 #function to open gitpage
 git_page_url = "https://github.com/Sergi0-0liveira"
 
-def open_git_page():
-    webbrowser.open(git_page_url)
+button_clicked = st.button("Visit GitHub Page")
+
+if button_clicked:
+    st.markdown(f'<a href="{git_page_url}" target="_blank"> <input type="button" value="GitHub Page"> </a>', unsafe_allow_html=True)
 
 #function to open gitpage
 git_linkedin = "https://www.linkedin.com/in/sergio-oliveira-headofpeople/"
@@ -51,8 +53,8 @@ with st.container():
 
     left_column, center_column, right_column = st.columns(3)
     with left_column:
-        if st.button(" GitHub Page  "):
-            st.markdown(f'<a href="https://github.com/Sergi0-0liveira" target="_blank">Link to GitHub</a>', unsafe_allow_html=True)
+        st.button(" GitHub Page  "):
+            
     with center_column:
         if st.button(" LinkedIn Page "):
             open_linkedin()
