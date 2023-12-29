@@ -21,7 +21,7 @@ def download_cv():
     # Download the CV file directly when the button is clicked
     st.download_button(
         label="Download CV",
-        filename="cv.pdf",
+        filename="pages/cv.pdf",
         data=open(cv_path, "rb").read()
     )
 
