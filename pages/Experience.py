@@ -14,8 +14,6 @@ def local_css(file_name):
 
 local_css("style.css")
 
-cv_downloaded = False
-
 def download_cv():
     # Replace this path with the actual path to your CV file
     cv_path = "pages/cv.pdf"
@@ -29,7 +27,6 @@ def download_cv():
             label="Download CV",
             data=open(cv_path, "rb").read()
         )
-
         cv_downloaded = True
 
 
@@ -72,6 +69,8 @@ st.write("""
             """)
 
 st.write("---")
+
+cv_downloaded = False
 
 # Call the function to download the CV when the button is clicked
 if st.button("Download CV"):
