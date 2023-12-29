@@ -14,20 +14,18 @@ def local_css(file_name):
 
 local_css("style.css")
 
+cv_downloaded = False
+
 def download_cv():
     # Replace this path with the actual path to your CV file
     cv_path = "pages/cv.pdf"
-        
-        # Check if the button has been clicked previously
+    # Check if the button has been clicked previously
     global cv_downloaded
 
     if not cv_downloaded:
         # If not clicked, download the CV file
         st.download_button( label="Download CV", data=open(cv_path, "rb").read())
         cv_downloaded = True
-
-
-
 
 # Define the app title
 st.title('Experience')
@@ -66,8 +64,6 @@ st.write("""
             """)
 
 st.write("---")
-
-cv_downloaded = False
 
 # Call the function to download the CV when the button is clicked
 if st.button("Download CV"):
