@@ -1,7 +1,6 @@
 import requests
 import streamlit as st
 from streamlit_lottie import st_lottie
-import streamlit import button, markdown
 import webbrowser
 
 st.set_page_config(
