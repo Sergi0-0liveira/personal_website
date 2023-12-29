@@ -14,7 +14,7 @@ def local_css(file_name):
 
 local_css("style.css")
 
-cv_path = "cv.pdf"
+cv_path = "pages/cv.pdf"
 
 def download_cv():
     st.markdown(f"### [Download CV]({cv_path})")
