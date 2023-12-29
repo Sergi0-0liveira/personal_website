@@ -29,13 +29,19 @@ def download_cv():
         file_content = file.read()
         st.download_button("Download CV", file_content, file_name='cv.pdf')
             
-#function to open gitpage
+#function to open git page
 git_page_url = "https://github.com/Sergi0-0liveira"
 
-button_clicked = st.button("Visit GitHub Page")
+# Create a button to open your GitHub page
+btn_open_github = button('GitHub Page')
 
-if button_clicked:
-    st.markdown(f'<a href="{git_page_url}" target="_blank"> <input type="button" value="GitHub Page"> </a>', unsafe_allow_html=True)
+# When the button is clicked, open the GitHub page in a new browser tab
+@st.experimental_button_callback
+def open_github_page():
+    import webbrowser
+    webbrowser.open_new_tab(repo_url)
+
+
 
 #function to open gitpage
 git_linkedin = "https://www.linkedin.com/in/sergio-oliveira-headofpeople/"
@@ -53,7 +59,9 @@ with st.container():
 
     left_column, center_column, right_column = st.columns(3)
     with left_column:
-        st.button(" GitHub Page ")
+        # Display the button in your app
+        st.markdown(f"** GitHub Page:**")
+        st.button(btn_open_github)
             
     with center_column:
         if st.button(" LinkedIn Page "):
