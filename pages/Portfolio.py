@@ -20,17 +20,15 @@ def local_css(file_name):
     with open(file_name) as f:
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-
 local_css("style.css")
 
-#download cv function
-cv_path = 'pages/cv.pdf'
+cv_path = "pages/cv.pdf"
 
 def download_cv():
     with open(cv_path, "rb") as file:
         file_content = file.read()
-        st.download_button("Download CV", file_content, file_name='cv.pdf', key="centered")
-
+        st.download_button("Download CV", file_content, file_name='cv.pdf')
+            
 #function to open gitpage
 git_page_url = "https://github.com/Sergi0-0liveira"
 
