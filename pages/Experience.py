@@ -22,7 +22,7 @@ def download_cv():
         st.download_button("Download CV", file_content, file_name='cv.pdf')
 
 # Define the app title
-st.title('Experience')
+st.title(':computer: Experience')
 
 st.write("---")
 with st.container():
@@ -47,7 +47,7 @@ st.markdown("""
             I'm dedicated to cultivating a workforce that not only adapts but excels in embracing the future.
             """)
 st.write("---")
-st.markdown(" ### Previous Experience and roles ### ")
+st.markdown(" ### :floppy_disk: Previous Experience and roles ### ")
 st.write("---")
 st.write(""" 
             With over 10 years of experience in global companies, I've garnered extensive expertise in diverse People Partner roles, supporting the establishment of HR functions and implementing strategies that harmonize across cultures and geographies. 
