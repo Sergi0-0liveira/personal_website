@@ -16,8 +16,10 @@ local_css("style.css")
 
 cv_path = "pages/cv.pdf"
 
-def download_cv():
-    st.markdown(f"### [Download CV]({cv_path})")
+ef download_cv():
+    with open(cv_path, "rb") as file:
+        file_content = file.read()
+        st.download_button("Download CV", file_content, file_name='cv.pdf')
 
 # Define the app title
 st.title('Experience')
